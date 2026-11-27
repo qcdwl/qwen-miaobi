@@ -4,14 +4,14 @@
 
 千问妙笔（`qwen-miaobi`）是中文互联网内容写作 Skill，适合内容创作者、个人站长和软件推广人员。给一个主题、标题、关键词或素材，就能起稿。支持公众号、知乎、SEO 网站、百度贴吧和短视频口播，也能写软件推荐与下载、AI 教程、GitHub 工具分享、副业科普和产品推广。
 
-**版本 2.0.0。** 纯 Markdown，主要面向千问办公电脑版。其他支持 Agent Skills 的宿主可按自身方式安装。技能可使用宿主已提供的检索和文件读写能力，无须为千问妙笔增加 API Key、脚本或外部 Skill。
+**版本 2.1.0。** 纯 Markdown，主要面向千问办公电脑版。其他支持 Agent Skills 的宿主可按自身方式安装。技能可使用宿主已提供的检索和文件读写能力，无须为千问妙笔增加 API Key、脚本或外部 Skill。
 
 ## 安装到千问办公电脑版
 
-1. 解压交付的 V2.0.0 ZIP。解压后确认有 `qwen-miaobi/SKILL.md`、`references/` 和 `templates/`。完整的技能目录是一个单独的文件夹。
+1. 解压交付的 V2.1.0 ZIP。解压后确认有 `qwen-miaobi/SKILL.md`、`references/` 和 `templates/`。完整的技能目录是一个单独的文件夹。
 2. 在千问办公电脑版左侧打开「扩展 → 技能」，从安装入口上传 `SKILL.md` 与辅助文件。如果当前版本支持整包 ZIP，可上传交付包。若外层目录影响识别，按客户端要求重新压缩该技能目录的内容。
 3. 也可按官方文档的本地方式放置完整 `qwen-miaobi` 文件夹。官方文档给出的技能目录为 `~/.qwenworkcn/skills/`，以当前宿主设置为准。
-4. 新建对话，输入 `/` 选择 `qwen-miaobi`，或直接说「使用千问妙笔写一篇文章」。覆盖旧版前先另存已确认的私有文风文件，更新后核对入口版本为 2.0.0。
+4. 新建对话，输入 `/` 选择 `qwen-miaobi`，或直接说「使用千问妙笔写一篇文章」。覆盖旧版前先另存已确认的私有文风文件，更新后核对入口版本为 2.1.0。
 
 安装入口与调用方式依据官方文档整理，ZIP 导入和更新效果仍待客户端验收。 [千问办公技能帮助](https://docs.qwenwork.cn/features/skills) · [Agent Skills 规范](https://agentskills.io/specification)
 
@@ -38,6 +38,17 @@
 
 候选确认后才写入指定文件。下次可附上该档案，或明确指向宿主能读到的私有副本。没有可用文件时，仍可正常使用默认文风。公开包里的档案是空模板。 [文风学习流程](references/style-learning.md) · [空档案](references/writing-dna.md)
 
+## 从认可的 ChatGPT 文章学习写法
+
+提供 10–20 篇你认可且有权提供的中文文章，最好注明体裁，或附上能提供的原始要求。也可以先从较少的同类文章开始，所得观察会标为初步。
+
+```text
+学习这批我认可的 ChatGPT 中文文章，先给我按体裁归纳的候选规则。
+请注明每条依据和适用范围。我确认后，再保存到私有副本的 references/gpt-writing-style.md。
+```
+
+写新稿时，个人档案保留适用于本题的作者偏好，GPT 样文档案补充同体裁写法。没有可读样文时不生成分析，普通写作可直接使用。 [学习流程](references/style-learning.md) · [GPT 空档案](references/gpt-writing-style.md)
+
 ## 项目导航
 
 - [技能入口](SKILL.md)与 `references/` 写作规则
@@ -45,4 +56,4 @@
 - [回归用例](tests/writing-test-cases.md)与[试写和验收记录](tests/writing-test-record.md)
 - [版本记录](CHANGELOG.md)与[参考和上游许可](SOURCES.md)
 
-千问妙笔为独立第三方技能。项目公开发布前由权利人确定开源许可及品牌声明。 [项目许可状态](LICENSE)
+千问妙笔为独立第三方技能。项目的开源授权与品牌声明由权利人确定。 [项目许可状态](LICENSE)
